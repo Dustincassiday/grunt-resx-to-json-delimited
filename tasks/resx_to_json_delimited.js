@@ -38,9 +38,9 @@ module.exports = function (grunt) {
 			var buffer = grunt.file.read(file),
 			parser = new xml2js.Parser();
 
-			parser.parseString(buffer.toString('utf-8'), callback);
+			parser.parseString(buffer.toString('utf-8'), parse);
 
-			function callback(err, result) {
+			function parse(err, result) {
 				var data = converter(result),
 					path = getDestFilePath(dest, file);
 				grunt.log.oklns(file + ' -> ' + path);
@@ -49,13 +49,14 @@ module.exports = function (grunt) {
 		}
 
 		function converter(resx) {
-			var obj = {};
+			var obj = {},
+				data = resx.root.data;
 
 			for(var i = 0; i < resx.root.data.length; i++) {
 				arrayToObject(
 					obj, 
-					resx.root.data[i].$.name.split(opts.delimiter), 
-					resx.root.data[i].value.toString());
+					data[i].$.name.split(opts.delimiter), 
+					data[i].value.toString());
 			}
 			return JSON.stringify(obj, null, 4);;
 		}
