@@ -1,0 +1,44 @@
+{
+  "name": "grunt-resx-to-json-delimited",
+  "description": "Convert RESX files to multi-dimensional JSON files using a delimiter.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/DustinCassiday/grunt-resx-to-json-delimited",
+  "author": {
+    "name": "Dustin Cassiday",
+    "email": "dustincassiday@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DustinCassiday/grunt-resx-to-json-delimited.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DustinCassiday/grunt-resx-to-json-delimited/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/DustinCassiday/grunt-resx-to-json-delimited/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin",
+    "resx",
+    "json",
+    "converter"
+  ],
+  "dependencies": {
+    "xml2js": "^0.4.17"
+  }
+}

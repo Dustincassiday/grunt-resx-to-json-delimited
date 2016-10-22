@@ -1,0 +1,12 @@
+{
+    "fruit": {
+        "apple": "apple",
+        "orange": "orange",
+        "banana": "banana"
+    },
+    "vegetable": {
+        "lettuce": "lettuce",
+        "tomato": "tomato",
+        "onion": "onion"
+    }
+}
