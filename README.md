@@ -49,7 +49,7 @@ Default value: `null`
 
 A delimiter value used to create the nested json object from the resx key.
 
-#### options.ext
+#### options.extension
 Type: `String`
 Default value: `'json'`
 

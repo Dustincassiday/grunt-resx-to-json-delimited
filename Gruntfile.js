@@ -46,7 +46,7 @@ module.exports = function(grunt) {
 				'tmp/with_dest_ext':'test/fixtures/**',
 			},		
 			options: {
-				destExt: 'js'
+				extension: 'js'
 			}
 		}
     },

@@ -91,7 +91,7 @@ module.exports = function (grunt) {
 		function getDestFilePath(path, file) {
 			return  dest + '/' + 
 				getFilename(file)
-					.replace('.resx', '.' + (opts.destExt || 'json'));
+					.replace('.resx', '.' + (opts.extension || 'json'));
 		}
 
 		function getFilename(path) {
