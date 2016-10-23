@@ -1,7 +1,7 @@
 {
   "name": "grunt-resx-to-json-delimited",
   "description": "Convert RESX files into structured JSON files using a delimiter.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/DustinCassiday/grunt-resx-to-json-delimited",
   "author": {
     "name": "Dustin Cassiday",
