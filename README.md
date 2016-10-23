@@ -39,7 +39,7 @@ Would produce the following object structure:
 {
   "book": {
 	"chapter": {
-	  "page": //resx value would be inserted here.
+	  "page": //RESX value would be inserted here.
 	}
   }
 }
@@ -68,20 +68,20 @@ grunt.initConfig({
 Type: `String`
 Default value: `null`
 
-A delimiter value used to create the nested json object from the resx key.
+A delimiter value used to create the nested JSON object from the RESX key.
 
 #### options.extension
 Type: `String`
 Default value: `'json'`
 
-A string value thet will be used as the file extension for all destination files.
+A string value that will be used as the file extension for all destination files.
 
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to create a json file
-from a resx file. With no options specified, the destination result will 
-be flat json files without any nested properties.
+In this example, the default options are used to create a JSON file
+from a RESX file. With no options specified, the destination result will 
+be flat JSON files without any nested properties.
 
 ```js
 grunt.initConfig({
@@ -95,7 +95,7 @@ grunt.initConfig({
 ```
 #### With Delimiter
 In this example, the specified `delimiter` option will be used to split 
-the resx key into a nested json object. 
+the RESX key into a nested JSON object. 
 
 ```js
 grunt.initConfig({
