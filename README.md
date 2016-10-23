@@ -8,8 +8,8 @@ This plugin requires Grunt `>=0.4.0`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out 
 the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains 
 how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as 
-install and use Grunt plugins. Once you're familiar with that process, you may i
-nstall this plugin with this command:
+install and use Grunt plugins. Once you're familiar with that process, you may 
+install this plugin with this command:
 
 ```shell
 npm install grunt-resx-to-json-delimited --save-dev
@@ -28,7 +28,7 @@ Specify a `delimiter` value to generate a structured JSON object.
 
 For example:
 
-Given a `delimter` value of `_` and resx entry with the key:
+Given a `delimter` value of `_` and RESX entry with the key:
 
 ```shell
 'book_chapter_page'
