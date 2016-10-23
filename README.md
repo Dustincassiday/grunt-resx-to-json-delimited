@@ -39,7 +39,7 @@ Would produce the following object structure:
 {
   "book": {
 	"chapter": {
-	  "page": *value*
+	  "page": //resx value would be inserted here.
 	}
   }
 }
