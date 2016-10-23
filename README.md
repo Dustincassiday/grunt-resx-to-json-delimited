@@ -38,9 +38,9 @@ Would produce the following object structure:
 ```javascript
 {
   "book": {
-	  "chapter": {
-		  "page": "value"
-	  }
+	"chapter": {
+	  "page": *value*
+	}
   }
 }
 ```
