@@ -1,6 +1,6 @@
 # grunt-resx-to-json-delimited
 
-> Convert RESX files into multi-dimensional JSON files using a delimiter.
+> Convert RESX files into structured JSON files using a delimited key value.
 
 ## Getting Started
 This plugin requires Grunt `>=0.4.0`
@@ -23,6 +23,27 @@ grunt.loadNpmTasks('grunt-resx-to-json-delimited');
 ```
 
 ## The "resx_to_json_delimited" task
+
+Specify a `delimiter` value to generate a structured JSON object.
+
+For example:
+
+Given a `delimter` value of `_` and resx entry with the key:
+
+```shell
+'book_chapter_page'
+```
+Would produce the following object structure:
+
+```javascript
+{
+  "book": {
+	  "chapter": {
+		  "page": "value"
+	  }
+  }
+}
+```
 
 ### Overview
 In your project's Gruntfile, add a section named `resx_to_json_delimited` to the 
