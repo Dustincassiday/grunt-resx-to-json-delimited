@@ -12,10 +12,10 @@
 module.exports = function (grunt) {
 
 	var xml2js = require('xml2js');
-		
+
 	grunt.registerMultiTask(
-        'resx_to_json_delimited',
-        'Convert .resx files to multi-dimensional .json files using optional delimiter.', 
+		'resx_to_json_delimited',
+		'Convert .resx files to multi-dimensional .json files using optional delimiter.',
 		multiTask);
 
 	function multiTask() {
@@ -28,15 +28,15 @@ module.exports = function (grunt) {
 		function filesOp(filePair) {
 			dest = filePair.dest;
 			filePair.src.forEach(fileOp);
-		} 
+		}
 
 		function fileOp(file) {
-			if(isResx(file)) { parser(file); }
+			if (isResx(file)) { parser(file); }
 		}
 
 		function parser(file) {
 			var buffer = grunt.file.read(file),
-			parser = new xml2js.Parser();
+				parser = new xml2js.Parser();
 
 			parser.parseString(buffer.toString('utf-8'), parse);
 
@@ -45,17 +45,17 @@ module.exports = function (grunt) {
 					path = getDestFilePath(dest, file);
 				grunt.log.oklns(file + ' -> ' + path);
 				writer(data, path);
-			}		
+			}
 		}
 
 		function converter(resx) {
 			var obj = {},
 				data = resx.root.data;
 
-			for(var i = 0; i < resx.root.data.length; i++) {
+			for (var i = 0; i < resx.root.data.length; i++) {
 				arrayToObject(
-					obj, 
-					data[i].$.name.split(opts.delimiter), 
+					obj,
+					data[i].$.name.split(opts.delimiter),
 					data[i].value.toString());
 			}
 			return JSON.stringify(obj, null, 4);;
@@ -64,14 +64,12 @@ module.exports = function (grunt) {
 		function arrayToObject(obj, keys, value) {
 			var last = arguments.length === 3 ? keys.pop() : false;
 
-			for(var i = 0; i < keys.length; i++)
-			{
-				obj = obj[ keys[i] ] = obj[ keys[i] ] || {};
+			for (var i = 0; i < keys.length; i++) {
+				obj = obj[keys[i]] = obj[keys[i]] || {};
 			}
-			
-			if( last )
-			{
-				obj = obj[ last ] = value;
+
+			if (last) {
+				obj = obj[last] = value;
 			}
 			return obj;
 		}
@@ -84,12 +82,8 @@ module.exports = function (grunt) {
 			}
 		}
 
-		function splitKey(key) {
-			return key.split(opts.delimiter);
-		}
-
 		function getDestFilePath(path, file) {
-			return  dest + '/' + 
+			return dest + '/' +
 				getFilename(file)
 					.replace('.resx', '.' + (opts.extension || 'json'));
 		}
