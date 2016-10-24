@@ -28,7 +28,7 @@ Specify a `delimiter` value to generate a structured JSON object.
 
 For example:
 
-Given a `delimter` value of `_` and RESX entry with the key:
+Given a `delimiter` value of `'_'` and RESX entry with the key:
 
 ```shell
 'book_chapter_page'
