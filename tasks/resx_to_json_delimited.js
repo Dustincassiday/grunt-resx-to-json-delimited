@@ -15,7 +15,7 @@ module.exports = function (grunt) {
   
   grunt.registerMultiTask(
     'resx_to_json_delimited',
-    'Convert .resx files into structured .json files using optional delimiter.',
+    'Convert RESX files into structured JSON files using optional delimiter.',
     multiTask);
 
   function multiTask() {
