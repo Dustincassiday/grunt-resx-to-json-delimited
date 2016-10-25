@@ -96,5 +96,5 @@ module.exports = function (grunt) {
     function isResx(file) {
       return /\.resx$/.test(file);
     }
-  };
+  }
 };
