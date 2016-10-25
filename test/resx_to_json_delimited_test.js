@@ -1,7 +1,7 @@
 'use strict';
 
 var grunt = require('grunt'),
-	sut = require('../tasks/resx_to_json_delimited');
+  sut = require('../tasks/resx_to_json_delimited');
 
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -24,29 +24,29 @@ var grunt = require('grunt'),
 */
 
 exports.resx_to_json_delimited = {
-	setUp: function (done) {
-		// setup here if necessary
-		done();
-	},
-	with_delimeter: function (test) {
-		test.expect(1);
-		var actual = grunt.file.read('tmp/with_delimiter/produce.json');
-		var expected = grunt.file.read('test/expected/with_delimiter/produce.json');
-		test.equal(actual, expected, 'should parse resx file with specified delimiter.');
-		test.done();
-	},
-	without_delimiter: function (test) {
-		test.expect(1);
-		var actual = grunt.file.read('tmp/without_delimiter/produce.json');
-		var expected = grunt.file.read('test/expected/without_delimiter/produce.json');
-		test.equal(actual, expected, 'should parse resx file without a delimiter.');
-		test.done();
-	},
-	with_dest_ext: function (test) {
-		test.expect(1);
-		var actual = grunt.file.read('tmp/with_dest_ext/produce.js');
-		var expected = grunt.file.read('test/expected/with_dest_ext/produce.js');
-		test.equal(actual, expected, 'should output a file with the js extension');
-		test.done();
-	}
+  setUp: function (done) {
+    // setup here if necessary
+    done();
+  },
+  with_delimeter: function (test) {
+    test.expect(1);
+    var actual = grunt.file.read('tmp/with_delimiter/produce.json');
+    var expected = grunt.file.read('test/expected/with_delimiter/produce.json');
+    test.equal(actual, expected, 'should parse resx file with specified delimiter.');
+    test.done();
+  },
+  without_delimiter: function (test) {
+    test.expect(1);
+    var actual = grunt.file.read('tmp/without_delimiter/produce.json');
+    var expected = grunt.file.read('test/expected/without_delimiter/produce.json');
+    test.equal(actual, expected, 'should parse resx file without a delimiter.');
+    test.done();
+  },
+  with_dest_ext: function (test) {
+    test.expect(1);
+    var actual = grunt.file.read('tmp/with_dest_ext/produce.js');
+    var expected = grunt.file.read('test/expected/with_dest_ext/produce.js');
+    test.equal(actual, expected, 'should output a file with the js extension');
+    test.done();
+  }
 };
