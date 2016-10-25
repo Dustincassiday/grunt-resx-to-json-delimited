@@ -66,7 +66,7 @@ grunt.initConfig({
 
 #### options.delimiter
 Type: `String`
-Default value: `null`
+Default value: `undefined`
 
 A delimiter value used to create the nested JSON object from the RESX key.
 
@@ -75,6 +75,12 @@ Type: `String`
 Default value: `'json'`
 
 A string value that will be used as the file extension for all destination files.
+
+#### options.whitespace
+Type: `String` or `Number`
+Default value: `undefined`
+
+A string or number object that's used to insert white space into the output JSON string for readability purposes. 
 
 ### Usage Examples
 
@@ -114,4 +120,9 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. 
 Add unit tests for any new or changed functionality. Lint and test your code 
 using [Grunt](http://gruntjs.com/).
+
+
+## Release History
+
+ * 2016-10-24   v0.1.2   Update devDependencies. Added `whitespace` option. 
 
