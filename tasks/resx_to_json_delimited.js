@@ -12,7 +12,7 @@
 module.exports = function (grunt) {
 
   var xml2js = require('xml2js');
-  
+
   grunt.registerMultiTask(
     'resx_to_json_delimited',
     'Convert RESX files into structured JSON files using optional delimiter.',
